@@ -1,2 +1,15 @@
 server:
   port: 8088
+
+spring:
+  datasource:
+    username: cccs7
+    password: Csq020611.
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://101.34.208.43:3306/cccs7-frame?serverTimeZone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8&useSSL=false
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      initial-size: 20
+      min-idle: 20
+      max-active: 100
+      max-wait: 60000
