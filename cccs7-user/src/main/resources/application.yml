@@ -1,5 +1,5 @@
 server:
-  port: 8088
+  port: 8089
 
 spring:
   datasource:
@@ -13,3 +13,14 @@ spring:
       min-idle: 20
       max-active: 100
       max-wait: 60000
+      stat-view-servlet:
+        enabled: true
+        url-pattern: /druid/*
+        login-username: cccs7
+        login-password: C020611.
+      filter:
+        stat: enabled
+        log-slow-sql: true
+        slow-sql-mills: 2000
+      wall:
+        enabled: true
