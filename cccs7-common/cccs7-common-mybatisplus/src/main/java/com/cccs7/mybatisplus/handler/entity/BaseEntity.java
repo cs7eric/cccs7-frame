@@ -22,8 +22,8 @@ public class BaseEntity implements Serializable {
     @TableField(value = "update_time",fill = FieldFill.UPDATE)
     private  Date updateTime;
 
-    @TableField(value = "delete_flag",fill = FieldFill.INSERT)
     @TableLogic
+    @TableField(value = "delete_flag",fill = FieldFill.INSERT)
     private Integer deleteFlag;
 
     @TableField(value = "version", fill = FieldFill.INSERT)

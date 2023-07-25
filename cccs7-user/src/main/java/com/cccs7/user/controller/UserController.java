@@ -23,4 +23,11 @@ public class UserController {
         int count = userService.addUser(userDto);
         return Result.ok(count);
     }
+
+    @DeleteMapping()
+    public Result<String> deleteUserById(@RequestParam("id") Integer id){
+        int count = userService.deleteUserById(id);
+        return Result.ok("删除成功");
+
+    }
 }

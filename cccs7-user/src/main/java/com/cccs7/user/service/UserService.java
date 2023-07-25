@@ -8,4 +8,5 @@ public interface UserService {
 
     int addUser(UserDto userDto);
 
+    int deleteUserById(Integer id);
 }
