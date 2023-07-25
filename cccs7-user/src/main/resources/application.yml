@@ -19,8 +19,9 @@ spring:
         login-username: cccs7
         login-password: C020611.
       filter:
-        stat: enabled
-        log-slow-sql: true
-        slow-sql-mills: 2000
-      wall:
-        enabled: true
+        stat:
+          enabled: true
+          log-slow-sql: true
+          slow-sql-mills: 2000
+        wall:
+          enabled: true
