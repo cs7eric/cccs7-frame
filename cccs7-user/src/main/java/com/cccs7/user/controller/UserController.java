@@ -1,6 +1,9 @@
 package com.cccs7.user.controller;
 
+import com.cccs7.mybatisplus.handler.entity.PageResult;
 import com.cccs7.user.entity.dto.UserDto;
+import com.cccs7.user.entity.po.UserPo;
+import com.cccs7.user.entity.req.UserListReq;
 import com.cccs7.user.entity.req.UserReq;
 import com.cccs7.user.service.UserService;
 import com.cccs7.web.bean.Result;
@@ -28,6 +31,17 @@ public class UserController {
     public Result<String> deleteUserById(@RequestParam("id") Integer id){
         int count = userService.deleteUserById(id);
         return Result.ok("删除成功");
+    }
+
+    @GetMapping("/list")
+    public Result<PageResult<UserPo>> getUserPage(@RequestBody UserListReq userListReq){
+        UserDto userDto = new UserDto();
+        System.out.println(userListReq);
+        BeanUtils.copyProperties(userListReq, userDto);
+
+        System.out.println(userDto);
+        PageResult<UserPo> page = userService.getUserPage(userDto);
+        return Result.ok(page);
 
     }
 }

@@ -4,4 +4,7 @@
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.cccs7.user.mapper.UserMapper">
 
+    <select id="getUserPage" resultType="com.cccs7.user.entity.po.UserPo">
+        select id, name, age from user where delete_flag = 0
+    </select>
 </mapper>
