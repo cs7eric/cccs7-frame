@@ -33,7 +33,11 @@ public class SysUserController {
      */
     @GetMapping
     public Result<PageResponse<SysUser>> queryByPage(@RequestBody SysUserReq sysUserReq) {
-        return Result.ok(this.sysUserService.queryByPage(sysUserReq));
+
+        System.out.println(sysUserReq.toString());
+        PageResponse<SysUser> pageResponse = this.sysUserService.queryByPage(sysUserReq);
+        System.out.println(pageResponse.toString());
+        return Result.ok(pageResponse);
     }
 
     /**

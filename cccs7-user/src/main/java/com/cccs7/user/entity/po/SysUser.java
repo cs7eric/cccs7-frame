@@ -16,7 +16,7 @@ import java.util.Date;
  */
 @Data
 @TableName("sys_user")
-public class SysUser implements Serializable {
+public class SysUser extends BaseEntity {
 
     @TableId(value = "id", type = IdType.AUTO)
     private Long id;
@@ -24,24 +24,5 @@ public class SysUser implements Serializable {
     private String name;
     
     private Integer age;
-
-    @TableField(value = "create_by",fill = FieldFill.INSERT)
-    private String createBy;
-
-    @TableField(value = "create_time",fill = FieldFill.INSERT)
-    private Date createTime;
-
-    @TableField(value = "update_by",fill = FieldFill.UPDATE)
-    private  String updateBy;
-
-    @TableField(value = "update_time",fill = FieldFill.UPDATE)
-    private  Date updateTime;
-
-    @TableLogic
-    @TableField(value = "delete_flag",fill = FieldFill.INSERT)
-    private Integer deleteFlag;
-
-    @TableField(value = "version", fill = FieldFill.INSERT)
-    private Integer version;
 }
 

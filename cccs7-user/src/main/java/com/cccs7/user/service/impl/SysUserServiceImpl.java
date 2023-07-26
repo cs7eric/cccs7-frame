@@ -1,6 +1,7 @@
 package com.cccs7.user.service.impl;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.cccs7.user.convert.SysUserConverter;
 import com.cccs7.user.entity.dto.SysUserDto;
 import com.cccs7.user.entity.po.SysUser;
 import com.cccs7.user.dao.SysUserDao;
@@ -47,8 +48,7 @@ public class SysUserServiceImpl implements SysUserService {
      */
     @Override
     public PageResponse<SysUser> queryByPage(SysUserReq sysUserReq) {
-        SysUser sysUser = new SysUser();
-        BeanUtils.copyProperties(sysUserReq, sysUser);
+        SysUser sysUser = SysUserConverter.INSTANCE.convertReqToSysUser(sysUserReq);
         PageResponse<SysUser> response = new PageResponse<>();
         response.setCurrent(sysUserReq.getPageNo());
         response.setPageSize(sysUserReq.getPageSize());
