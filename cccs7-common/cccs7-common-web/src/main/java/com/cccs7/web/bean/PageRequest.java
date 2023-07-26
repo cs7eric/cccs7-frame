@@ -1,6 +1,5 @@
 package com.cccs7.web.bean;
 
-import lombok.Data;
 import lombok.Setter;
 
 @Setter

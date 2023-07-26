@@ -1,9 +1,12 @@
 package com.cccs7.web.bean;
 
+import lombok.Data;
+
 import java.io.Serializable;
 import java.util.Collections;
 import java.util.List;
 
+@Data
 public class PageResponse<T> implements Serializable  {
 
     private Long pageNo = 1L;
