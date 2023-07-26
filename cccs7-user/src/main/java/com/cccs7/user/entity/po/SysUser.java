@@ -5,6 +5,7 @@ import com.cccs7.mybatisplus.entity.BaseEntity;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -15,7 +16,7 @@ import java.util.Date;
  */
 @Data
 @TableName("sys_user")
-public class SysUser  {
+public class SysUser implements Serializable {
 
     @TableId(value = "id", type = IdType.AUTO)
     private Long id;

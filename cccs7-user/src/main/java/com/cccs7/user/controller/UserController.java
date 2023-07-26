@@ -21,7 +21,9 @@ public class UserController {
     @PostMapping("/add")
     public Result<Integer> addUser(@RequestBody UserReq userReq){
 
+        System.out.println("controller");
         UserDto userDto = new UserDto();
+        System.out.println(userReq);
         BeanUtils.copyProperties(userReq, userDto);
         int count = userService.addUser(userDto);
         return Result.ok(count);

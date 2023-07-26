@@ -1,5 +1,6 @@
 package com.cccs7.user.service;
 
+import com.cccs7.user.entity.dto.SysUserDto;
 import com.cccs7.user.entity.po.SysUser;
 import com.cccs7.user.entity.req.SysUserReq;
 import com.cccs7.web.bean.PageResponse;
@@ -54,5 +55,7 @@ public interface SysUserService {
      * @return 是否成功
      */
     boolean deleteById(Long id);
+
+    int insertFunc(SysUserDto sysUserDto);
 
 }

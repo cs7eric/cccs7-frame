@@ -20,9 +20,12 @@ public class UserServiceImpl implements UserService {
     @Override
     public int addUser(UserDto userDto) {
 
+        System.out.println("service");
         UserPo userPo = new UserPo();
         BeanUtils.copyProperties(userDto, userPo);
+        System.out.println("mapper");
         int count = userMapper.insert(userPo);
+        System.out.println("mapper over");
         return count;
     }
 
