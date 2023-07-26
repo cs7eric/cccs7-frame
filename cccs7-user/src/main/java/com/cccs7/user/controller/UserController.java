@@ -1,6 +1,6 @@
 package com.cccs7.user.controller;
 
-import com.cccs7.mybatisplus.handler.entity.PageResult;
+import com.cccs7.mybatisplus.entity.PageResult;
 import com.cccs7.user.entity.dto.UserDto;
 import com.cccs7.user.entity.po.UserPo;
 import com.cccs7.user.entity.req.UserListReq;

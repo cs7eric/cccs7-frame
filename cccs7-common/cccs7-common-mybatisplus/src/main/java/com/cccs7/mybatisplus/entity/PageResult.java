@@ -1,4 +1,4 @@
-package com.cccs7.mybatisplus.handler.entity;
+package com.cccs7.mybatisplus.entity;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import lombok.Data;

@@ -1,10 +1,8 @@
 package com.cccs7.user.entity.po;
 
 import com.baomidou.mybatisplus.annotation.*;
-import com.cccs7.mybatisplus.handler.entity.BaseEntity;
+import com.cccs7.mybatisplus.entity.BaseEntity;
 import lombok.Data;
-
-import java.util.Date;
 
 @Data
 @TableName("user")

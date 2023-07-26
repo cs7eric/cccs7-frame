@@ -1,4 +1,4 @@
-package com.cccs7.mybatisplus.handler.interceptor;
+package com.cccs7.mybatisplus.interceptor;
 
 import org.apache.ibatis.executor.statement.StatementHandler;
 import org.apache.ibatis.mapping.BoundSql;

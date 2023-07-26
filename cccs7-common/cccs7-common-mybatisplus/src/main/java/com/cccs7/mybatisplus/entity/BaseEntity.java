@@ -1,4 +1,4 @@
-package com.cccs7.mybatisplus.handler.entity;
+package com.cccs7.mybatisplus.entity;
 
 import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.TableField;
@@ -16,7 +16,7 @@ public class BaseEntity implements Serializable {
     @TableField(value = "create_time",fill = FieldFill.INSERT)
     private Date createTime;
 
-    @TableField(value = "update_time",fill = FieldFill.UPDATE)
+    @TableField(value = "update_by",fill = FieldFill.UPDATE)
     private  String updateBy;
 
     @TableField(value = "update_time",fill = FieldFill.UPDATE)
