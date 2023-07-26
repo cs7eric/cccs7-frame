@@ -12,6 +12,7 @@ public class MyMetaObjectHandler implements MetaObjectHandler {
 
     @Override
     public void insertFill(MetaObject metaObject) {
+        System.out.println("meta执行");
         this.strictInsertFill(metaObject, "createBy", String.class, "cccs7");
         this.strictInsertFill(metaObject, "createTime", Date.class, new Date());
         this.strictInsertFill(metaObject, "deleteFlag", Integer.class, 0);

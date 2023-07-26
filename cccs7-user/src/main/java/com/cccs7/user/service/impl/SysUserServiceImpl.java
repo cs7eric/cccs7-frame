@@ -1,9 +1,11 @@
 package com.cccs7.user.service.impl;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.cccs7.user.entity.dto.SysUserDto;
 import com.cccs7.user.entity.po.SysUser;
 import com.cccs7.user.dao.SysUserDao;
 import com.cccs7.user.entity.req.SysUserReq;
+import com.cccs7.user.mapper.SysUserMapper;
 import com.cccs7.user.service.SysUserService;
 import com.cccs7.web.bean.PageResponse;
 import org.springframework.beans.BeanUtils;
@@ -23,6 +25,9 @@ import java.util.List;
 public class SysUserServiceImpl implements SysUserService {
     @Resource
     private SysUserDao sysUserDao;
+
+    @Resource
+    private SysUserMapper sysUserMapper;
 
     /**
      * 通过ID查询单条数据
@@ -87,5 +92,13 @@ public class SysUserServiceImpl implements SysUserService {
     @Override
     public boolean deleteById(Long id) {
         return this.sysUserDao.deleteById(id) > 0;
+    }
+
+    @Override
+    public int insertFunc(SysUserDto sysUserDto) {
+
+        SysUser sysUser = new SysUser();
+        BeanUtils.copyProperties(sysUserDto, sysUser);
+        return sysUserMapper.insert(sysUser);
     }
 }

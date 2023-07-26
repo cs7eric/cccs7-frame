@@ -1,10 +1,13 @@
 package com.cccs7.user.controller;
 
+import com.cccs7.user.entity.dto.SysUserDto;
 import com.cccs7.user.entity.po.SysUser;
 import com.cccs7.user.entity.req.SysUserReq;
 import com.cccs7.user.service.SysUserService;
 import com.cccs7.web.bean.PageResponse;
 import com.cccs7.web.bean.Result;
+import org.springframework.beans.BeanUtils;
+import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -77,5 +80,14 @@ public class SysUserController {
         return Result.ok(this.sysUserService.deleteById(id));
     }
 
+
+    @PostMapping("/insert")
+    public Result<String> insert(@RequestBody SysUserReq sysUserReq){
+
+        SysUserDto sysUserDto = new SysUserDto();
+        BeanUtils.copyProperties(sysUserReq, sysUserDto);
+        int res = sysUserService.insertFunc(sysUserDto);
+        return Result.ok("成功");
+    }
 }
 
