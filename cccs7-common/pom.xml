@@ -11,6 +11,9 @@
 
     <artifactId>cccs7-common</artifactId>
     <packaging>pom</packaging>
+    <modules>
+        <module>cccs7-common-swagger</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>

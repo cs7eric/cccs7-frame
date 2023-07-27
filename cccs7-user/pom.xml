@@ -27,7 +27,11 @@
             <artifactId>cccs7-common-mybatisplus</artifactId>
             <version>1.0.0-SNAPSHOT</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.mapstruct/mapstruct -->
+        <dependency>
+            <groupId>com.cccs7</groupId>
+            <artifactId>cccs7-common-swagger</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency><!-- https://mvnrepository.com/artifact/org.mapstruct/mapstruct -->
         <dependency>
             <groupId>org.mapstruct</groupId>
             <artifactId>mapstruct</artifactId>
