@@ -30,6 +30,7 @@ sql:
     show: true
 mybatis-plus:
   global-config:
+    banner: false
     db-config:
       logic-delete-field: delete_flag
       logic-delete-value: 1
