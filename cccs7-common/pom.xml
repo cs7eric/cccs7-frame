@@ -3,24 +3,46 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>cccs7-frame</artifactId>
+        <artifactId>cccs7-dependencies</artifactId>
         <groupId>com.cccs7</groupId>
         <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../cccs7-dependencies</relativePath>
     </parent>
-    <modelVersion>4.0.0</modelVersion>
 
     <artifactId>cccs7-common</artifactId>
     <packaging>pom</packaging>
+    <modelVersion>4.0.0</modelVersion>
+
     <modules>
+        <module>cccs7-common-web</module>
+        <module>cccs7-common-mybatisplus</module>
+        <module>cccs7-common-redis</module>
         <module>cccs7-common-swagger</module>
     </modules>
 
-    <properties>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
-    </properties>
-
-    <dependencies>
-    </dependencies>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.cccs7</groupId>
+                <artifactId>cccs7-common-mybatisplus</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.cccs7</groupId>
+                <artifactId>cccs7-common-redis</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.cccs7</groupId>
+                <artifactId>cccs7-common-swagger</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.cccs7</groupId>
+                <artifactId>cccs7-common-web</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
 </project>
