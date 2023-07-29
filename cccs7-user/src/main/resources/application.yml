@@ -57,3 +57,6 @@ swagger:
   email: csq020611@gmail.com
   version: 1.0
   description: 一个开箱即用的 java 框架
+
+logging:
+  config: classpath:log4j2-spring.xml
