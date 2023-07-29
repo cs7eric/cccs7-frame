@@ -11,7 +11,7 @@
     <packaging>pom</packaging>
     <version>1.0.0-SNAPSHOT</version>
     <modules>
-        <module>cccs7-user</module>
+        <module>cccs7-demo</module>
         <module>cccs7-common</module>
         <module>cccs7-common/cccs7-common-web</module>
         <module>cccs7-common/cccs7-common-mybatisplus</module>
