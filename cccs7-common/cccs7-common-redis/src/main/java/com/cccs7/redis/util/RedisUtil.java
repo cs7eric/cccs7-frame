@@ -99,5 +99,5 @@ public class RedisUtil {
     public Object rank(String key, Object obj) {
         return redisTemplate.opsForZSet().rank(key, obj);
     }
-    
+
 }

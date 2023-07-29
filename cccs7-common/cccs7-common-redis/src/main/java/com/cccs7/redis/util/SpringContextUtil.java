@@ -5,6 +5,12 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Component;
 
+/**
+ * SpringContext工具类
+ *
+ * @author cccs7
+ * @date 2023/07/29
+ */
 @Component
 public class SpringContextUtil implements ApplicationContextAware {
 
@@ -13,7 +19,7 @@ public class SpringContextUtil implements ApplicationContextAware {
 
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-        this.applicationContext = applicationContext;
+        SpringContextUtil.applicationContext = applicationContext;
     }
 
     public static ApplicationContext getApplicationContext() {
