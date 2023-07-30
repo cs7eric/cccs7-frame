@@ -60,3 +60,6 @@ swagger:
 
 logging:
   config: classpath:log4j2-spring.xml
+log:
+  aspect:
+    enable: true

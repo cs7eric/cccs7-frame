@@ -89,21 +89,21 @@
             <AppenderRef ref="Console"/>
         </Logger>
 
-        <AsyncLogger name="asyncLog" level="info" additivity="true">
-            <appender-ref ref="RollingFileInfo"/>
-        </AsyncLogger>
-
-        <AsyncRoot level="info" includeLocation="true">
-            <AppenderRef ref="RollingFileInfo"/>
-        </AsyncRoot>
-
-        <!--        <root level="info">-->
-        <!--            <appender-ref ref="Console"/>-->
+        <!--        <AsyncLogger name="asyncLog" level="info" additivity="true">-->
         <!--            <appender-ref ref="RollingFileInfo"/>-->
-        <!--            <appender-ref ref="RollingFileWarn"/>-->
-        <!--            <appender-ref ref="RollingFileError"/>-->
-        <!--            <appender-ref ref="fileLog"/>-->
-        <!--        </root>-->
+        <!--        </AsyncLogger>-->
+
+        <!--        <AsyncRoot level="info" includeLocation="true">-->
+        <!--            <AppenderRef ref="RollingFileInfo"/>-->
+        <!--        </AsyncRoot>-->
+
+        <root level="info">
+            <appender-ref ref="Console"/>
+            <appender-ref ref="RollingFileInfo"/>
+            <appender-ref ref="RollingFileWarn"/>
+            <appender-ref ref="RollingFileError"/>
+            <appender-ref ref="fileLog"/>
+        </root>
     </loggers>
 
 </configuration>
