@@ -7,7 +7,6 @@ import com.cccs7.user.service.SysUserService;
 import com.cccs7.web.bean.PageResponse;
 import com.cccs7.web.bean.Result;
 import org.springframework.beans.BeanUtils;
-import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -29,6 +28,7 @@ public class SysUserController {
 
     /**
      * 分页查询
+     *
      * @return 查询结果
      */
     @GetMapping
@@ -36,7 +36,6 @@ public class SysUserController {
 
         System.out.println(sysUserReq.toString());
         PageResponse<SysUser> pageResponse = this.sysUserService.queryByPage(sysUserReq);
-        System.out.println(pageResponse.toString());
         return Result.ok(pageResponse);
     }
 
@@ -86,7 +85,7 @@ public class SysUserController {
 
 
     @PostMapping("/insert")
-    public Result<String> insert(@RequestBody SysUserReq sysUserReq){
+    public Result<String> insert(@RequestBody SysUserReq sysUserReq) {
 
         SysUserDto sysUserDto = new SysUserDto();
         BeanUtils.copyProperties(sysUserReq, sysUserDto);
