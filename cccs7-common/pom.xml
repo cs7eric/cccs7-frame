@@ -18,6 +18,7 @@
         <module>cccs7-common-mybatisplus</module>
         <module>cccs7-common-redis</module>
         <module>cccs7-common-swagger</module>
+        <module>cccs7-common-log</module>
     </modules>
 
     <dependencyManagement>
