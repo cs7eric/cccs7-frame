@@ -11,6 +11,8 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Map;
+
 @RestController
 @RequestMapping("/user")
 public class UserController {
@@ -18,10 +20,15 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @PostMapping("/add")
-    public Result<Integer> addUser(@RequestBody UserReq userReq){
+    @PostMapping("/login")
+    public Result<Map<String, String>> login(@RequestBody UserPo userPo) {
 
-        System.out.println("controller");
+        return userService.login(userPo);
+    }
+
+    @PostMapping("/add")
+    public Result<Integer> addUser(@RequestBody UserReq userReq) {
+
         UserDto userDto = new UserDto();
         System.out.println(userReq);
         BeanUtils.copyProperties(userReq, userDto);
@@ -30,13 +37,13 @@ public class UserController {
     }
 
     @DeleteMapping()
-    public Result<String> deleteUserById(@RequestParam("id") Integer id){
+    public Result<String> deleteUserById(@RequestParam("id") Integer id) {
         int count = userService.deleteUserById(id);
         return Result.ok("删除成功");
     }
 
     @GetMapping("/list")
-    public Result<PageResult<UserPo>> getUserPage(@RequestBody UserListReq userListReq){
+    public Result<PageResult<UserPo>> getUserPage(@RequestBody UserListReq userListReq) {
         UserDto userDto = new UserDto();
         System.out.println(userListReq);
         BeanUtils.copyProperties(userListReq, userDto);
@@ -44,6 +51,5 @@ public class UserController {
         System.out.println(userDto);
         PageResult<UserPo> page = userService.getUserPage(userDto);
         return Result.ok(page);
-
     }
 }

@@ -20,7 +20,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class menu extends BaseEntity {
+public class Menu extends BaseEntity {
 
     @TableId
     private Long id;

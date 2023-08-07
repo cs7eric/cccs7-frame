@@ -19,6 +19,8 @@
         <module>cccs7-common-redis</module>
         <module>cccs7-common-swagger</module>
         <module>cccs7-common-log</module>
+        <module>cccs7-common-security</module>
+        <module>cccs7-common-tool</module>
     </modules>
 
     <dependencyManagement>
@@ -41,6 +43,16 @@
             <dependency>
                 <groupId>com.cccs7</groupId>
                 <artifactId>cccs7-common-web</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.cccs7</groupId>
+                <artifactId>cccs7-common-tool</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.cccs7</groupId>
+                <artifactId>cccs7-common-log</artifactId>
                 <version>${project.version}</version>
             </dependency>
         </dependencies>

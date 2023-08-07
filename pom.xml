@@ -15,7 +15,6 @@
         <module>cccs7-user</module>
         <module>cccs7-common</module>
         <module>cccs7-dependencies</module>
-        <module>cccs7-common/cccs7-common-tool</module>
     </modules>
 
 
