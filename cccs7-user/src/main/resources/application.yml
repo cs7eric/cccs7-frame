@@ -3,10 +3,11 @@ server:
 
 spring:
   datasource:
-    username: cccs7
-    password: Csq020611.
+    username: root
+    password: C020611.
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://101.34.208.43:3306/cccs7-frame?serverTimeZone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8&useSSL=false
+    #    url: jdbc:mysql://101.34.208.43:3306/cccs7_security?serverTimeZone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8&useSSL=false
+    url: jdbc:mysql://localhost:3306/cccs7_security?serverTimeZone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8&useSSL=false
     type: com.alibaba.druid.pool.DruidDataSource
     druid:
       initial-size: 20
@@ -16,6 +17,7 @@ spring:
       stat-view-servlet:
         enabled: true
         url-pattern: /druid/*
+        #        login-username: cccs7
         login-username: cccs7
         login-password: C020611.
       filter:
@@ -63,3 +65,5 @@ logging:
 log:
   aspect:
     enable: true
+security:
+  enabled: true

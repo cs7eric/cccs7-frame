@@ -4,6 +4,7 @@ import com.cccs7.redis.util.RedisShareLockUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -44,5 +45,11 @@ public class TestController {
         }
         long endTime = System.currentTimeMillis();
         log.info("当前耗时：{}", endTime - startTime);
+    }
+
+    @GetMapping("/security")
+    @PreAuthorize("hasAuthority('sys:book:list2')")
+    public String testSecurity() {
+        return "success";
     }
 }
