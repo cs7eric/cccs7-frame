@@ -1,0 +1,72 @@
+server:
+  port: 8089
+
+spring:
+  datasource:
+    username: root
+    password: C020611.
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    #    url: jdbc:mysql://101.34.208.43:3306/cccs7_security?serverTimeZone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8&useSSL=false
+    url: jdbc:mysql://localhost:3306/cccs7_security?serverTimeZone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8&useSSL=false
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      initial-size: 20
+      min-idle: 20
+      max-active: 100
+      max-wait: 60000
+      stat-view-servlet:
+        enabled: true
+        url-pattern: /druid/*
+        #        login-username: cccs7
+        login-username: cccs7
+        login-password: C020611.
+      filter:
+        stat:
+          enabled: true
+          log-slow-sql: true
+          slow-sql-mills: 2000
+        wall:
+          enabled: true
+  redis:
+    host: 101.34.208.43
+    port: 6379
+    database: 0
+    password: Csq020611.
+    lettuce:
+      pool:
+        max-active: 20
+        max-idle: 8
+        max-wait: -1
+        min-idle: 0
+
+sql:
+  beauty:
+    show: true
+mybatis-plus:
+  global-config:
+    banner: false
+    db-config:
+      logic-delete-field: delete_flag
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+  mapper-location: classpath:mapper/*.xml
+
+swagger:
+  base-package: "com.cccs7"
+  title: cccs7-frame
+  contact-name: cccs7
+  contact-url: https://github.com/cs7eric/cccs7-frame
+  email: csq020611@gmail.com
+  version: 1.0
+  description: 一个开箱即用的 java 框架
+
+logging:
+  config: classpath:log4j2-spring.xml
+log:
+  aspect:
+    enable: true
+security:
+  enabled: true
+guava:
+  cache:
+    switch: true
