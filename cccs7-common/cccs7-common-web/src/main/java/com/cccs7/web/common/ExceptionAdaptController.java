@@ -9,22 +9,23 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
  * @author cccs7
  * @date 2023/08/07
  */
-//@RestControllerAdvice
-public class ExceptionAdaptController {
+public interface ExceptionAdaptController {
 
+    /**
+     * 处理程序运行时异常
+     *
+     * @param runtimeException 运行时异常
+     * @return {@link Result}
+     */
     @ExceptionHandler({RuntimeException.class})
-    public Result handlerRuntimeException(RuntimeException runtimeException) {
-        runtimeException.printStackTrace();
+    Result handlerRuntimeException(RuntimeException runtimeException);
 
-        return Result.fail();
-    }
-
+    /**
+     * 异常处理程序
+     *
+     * @param exception 异常
+     * @return {@link Result}
+     */
     @ExceptionHandler({Exception.class})
-    public Result handlerException(Exception exception) {
-        exception.printStackTrace();
-        StackTraceElement[] stackTrace = exception.getStackTrace();
-        System.out.println("---------" + stackTrace.toString());
-
-        return Result.fail();
-    }
+    Result handlerException(Exception exception);
 }
