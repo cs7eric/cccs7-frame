@@ -1,5 +1,6 @@
 package com.cccs7.user.controller;
 
+import com.cccs7.redis.util.GuavaCacheUtil;
 import com.cccs7.redis.util.RedisShareLockUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +9,11 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Map;
 
 @Slf4j
 @RestController
@@ -19,6 +25,9 @@ public class TestController {
 
     @Autowired
     private RedisTemplate redisTemplate;
+
+    @Autowired
+    private GuavaCacheUtil cacheUtil;
 
     @GetMapping("/test")
     public String testSpringboot() {
@@ -51,5 +60,29 @@ public class TestController {
     @PreAuthorize("hasAuthority('sys:book:list2')")
     public String testSecurity() {
         return "success";
+    }
+
+    @GetMapping("/localCache")
+    public void testLocalCache() {
+        ArrayList<Long> skuIdList = new ArrayList<>();
+        cacheUtil.getResult(skuIdList, "skuInfo", "skuName", SkuInfo.class, (list) -> getSkuInfo(skuIdList));
+    }
+
+    public Map<Long, SkuPriceInfo> getSkuPrice(List<Long> skuIds) {
+        return Collections.emptyMap();
+    }
+
+    private Map<Long, SkuInfo> getSkuInfo(List<Long> skuIds) {
+        return Collections.emptyMap();
+    }
+
+    private class SkuInfo {
+        private Long id;
+        private String name;
+    }
+
+    private class SkuPriceInfo {
+        private Long id;
+        private Long price;
     }
 }
