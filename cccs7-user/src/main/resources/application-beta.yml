@@ -67,3 +67,6 @@ log:
     enable: true
 security:
   enabled: true
+guava:
+  cache:
+    switch: true
