@@ -5,19 +5,16 @@
 	<img src='https://img.shields.io/badge/github-black'>
 </a>
 <a href="https://blog.cccs7.icu/">
-	<img src="https://img.shields.io/badge/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-Cccs7's_blog-red?logo=%3Flogo%3Dhttps%3A%2F%2Fcs7eric-image.oss-cn-hangzhou.aliyuncs.com%2Fimages%2Flogo.svg
-">    
+	<img src="https://img.shields.io/badge/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-Cccs7's_blog-red">    
 </a>
 <a href="https://github.com/cs7eric/cccs7-frame">
-	<img src="https://img.shields.io/badge/version-v1.0-red?logo=%3Flogo%3Dhttps%3A%2F%2Fcs7eric-image.oss-cn-hangzhou.aliyuncs.com%2Fimages%2Flogo.svg
-">
+	<img src="https://img.shields.io/badge/version-v1.0-red">
 </a>
 <a href='https://github.com/cs7eric/cccs7-frame'>
 	<img src='https://img.shields.io/badge/License-MIT-red'>    
 </a>
 <a href="https://github.com/cs7eric/cccs7-frame">
-	<img src="https://img.shields.io/badge/wechat-cccs7611-brightgreen?logo=%3Flogo%3Dhttps%3A%2F%2Fcs7eric-image.oss-cn-hangzhou.aliyuncs.com%2Fimages%2Flogo.svg
-">
+	<img src="https://img.shields.io/badge/wechat-cccs7611-brightgreen">
 </a>
 </p>
 <div align="center">
