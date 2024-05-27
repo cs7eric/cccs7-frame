@@ -35,7 +35,7 @@
 
 持续更新中
 
-<a href="https://imgse.com/i/pPKkSLF"><img src="https://cs7eric-image.oss-cn-hangzhou.aliyuncs.com/images/pPKkSLF.png" alt="pPKkSLF.png" border="0" style="zoom:33%;" /></a>
+
 
 ## 🔥项目模块结构介绍
 
