@@ -39,27 +39,27 @@
 
 ## 🔥项目模块结构介绍
 
-### ape-common
+### cccs7-common
 
-* ape-common-job：分布式任务调度组件
-* ape-common-log：日志组件，提供日志切面自动记录及异步日志提升性能
-* ape-common-mybatisplus：采用Mybatisplus作为与数据库交互
-* ape-common-redis：缓存组件，提供基于redis的操作封装，redis分布式锁，guava的cache工具类
-* ape-common-starter：启动类组件，与启动类相关的功能，放到此组件处，目前包含mongoStarter
-* ape-common-swagger：swagger组件，提供整体项目访问api的入口及方法文档
-* ape-common-test：测试组件，集成springboot-test，及代码单元测试，代码覆盖率，行覆盖率检测
-* ape-common-tool：常用的工具类组件，满足业务日常开发的各种需要，保障安全性，低入侵性
-* ape-common-web：web组件，提供统一异常处理，web模块转换，统一返回值
-* ape-common-websocket：websocket组件，提供一套带鉴权的websocket，引入即用，简单方便
-* ape-mail：邮件发送组件
+* cccs7-common-job：分布式任务调度组件
+* cccs7-common-log：日志组件，提供日志切面自动记录及异步日志提升性能
+* cccs7-common-mybatisplus：采用Mybatisplus作为与数据库交互
+* cccs7-common-redis：缓存组件，提供基于redis的操作封装，redis分布式锁，guava的cache工具类
+* cccs7-common-starter：启动类组件，与启动类相关的功能，放到此组件处，目前包含mongoStarter
+* cccs7-common-swagger：swagger组件，提供整体项目访问api的入口及方法文档
+* cccs7-common-test：测试组件，集成springboot-test，及代码单元测试，代码覆盖率，行覆盖率检测
+* cccs7-common-tool：常用的工具类组件，满足业务日常开发的各种需要，保障安全性，低入侵性
+* cccs7-common-web：web组件，提供统一异常处理，web模块转换，统一返回值
+* cccs7-common-websocket：websocket组件，提供一套带鉴权的websocket，引入即用，简单方便
+* cccs7-mail：邮件发送组件
 
-### ape-demo
+### cccs7-demo
 
 demo里提供了大量的实例，教大家如何直接使用这个项目框架，大家在开发中，可以直接参考这个模块来建立自己的项目进行使用。
-目前已经提供的示例功能
-<a href="https://imgse.com/i/pPM6Lge"><img src="https://cs7eric-image.oss-cn-hangzhou.aliyuncs.com/images/pPM6Lge.png" alt="pPM6Lge.png" border="0" style="zoom: 33%;" /></a>
 
-### ape-dependencies
+
+
+### cccs7-dependencies
 
 该模块为一个父pom模块，提供项目整体的maven包的锁定及规范，统一升级，统一引入。
 
